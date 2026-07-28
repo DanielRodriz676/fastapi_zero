@@ -11,7 +11,10 @@ dependencies = [
     "fastapi[standard] (>=0.136.3,<0.137.0)",
     "pydantic-settings (>=2.14.2,<3.0.0)",
     "sqlalchemy (>=2.0.51,<3.0.0)",
-    "alembic (>=1.18.5,<2.0.0)"
+    "alembic (>=1.18.5,<2.0.0)",
+    "pwdlib[argon2] (>=0.3.0,<0.4.0)",
+    "python-multipart (>=0.0.32,<0.0.33)",
+    "pyjwt (>=2.13.0,<3.0.0)"
 ]
 
 
@@ -55,5 +58,5 @@ pre_format = 'ruff check --fix'
 format = 'ruff format'
 run = 'fastapi dev fastapi_zero/app.py'
 pre_test = 'task lint'
-test = 'pytest -s -x --cov=fastapi_zero -vv'
+test = 'pytest -s --cov=fastapi_zero -vv'
 post_test = 'coverage html'
