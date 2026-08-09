@@ -33,12 +33,12 @@ dev = [
 ]
 
 [tool.ruff]
-line-length = 79
+line-length = 200
 extend-exclude = ['migrations']
 
 [tool.ruff.lint]
 preview = true
-select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+select = ['I', 'F', 'E', 'W', 'PL', 'PT', 'FAST']
 
 [tool.ruff.format]
 preview = true
