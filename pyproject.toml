@@ -60,6 +60,9 @@ asyncio_default_fixture_loop_scope = 'function'
 [tool.typos.files]
 extend-exclude = ["*.md", "htmlcov"]
 
+[tool.typos.default]
+extend-ignore-identifiers-re = ["selectin"]
+
 [tool.taskipy.tasks]
 pre_lint = 'typos'
 lint = 'ruff check'

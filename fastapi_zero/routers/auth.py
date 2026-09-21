@@ -21,8 +21,8 @@ CurrentUser = Annotated[User, Depends(get_current_user)]
 
 @router.post('/token', response_model=Token)
 async def login_for_access_token(
-    form_data: T_OAuth2Form,
-    session: T_Session,
+    form_data: T_OAuth2Form,  # type: ignore
+    session: T_Session,  # type: ignore
 ):
     user = await session.scalar(select(User).where(User.email == form_data.username))
 
